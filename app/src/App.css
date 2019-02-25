@@ -1,0 +1,30 @@
+body{
+  background-image: url("../src/full-bloom.png");
+}
+.wrapper{
+  width: 1140px;
+  margin: 0 auto;
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  color: gainsboro;
+  background-color: #373c42;
+}
+.bookList{
+  border: 1px solid rgba(0, 0, 0, 0.438);
+  padding: 10px;
+  margin: 10px;
+  list-style-type: none;
+}
+.saveBook{
+  float: right;
+  position: relative;
+  top: 5px;
+  right: 5px;
+}
