@@ -10,7 +10,8 @@ import API from "../utils/API";
 class SearchPage extends Component {
   state= {
     books:{},
-    search: ""
+    search: "",
+    favorites: {}
   }
 
   searchBooks = query => {
@@ -32,6 +33,12 @@ class SearchPage extends Component {
     this.searchBooks(this.state.search);
   }
 
+  addToFavorites = key => {
+    const favorites = { ...this.state.favorites };
+    favorites[key] = favorites[key] + 1
+    this.setState({ favorites })
+  }
+
   render() {
     return (
       <div className="SearchPage">
@@ -47,6 +54,7 @@ class SearchPage extends Component {
              key={key}
              index={key}
              details={this.state.books[key]}
+             addToFavorites={this.addToFavorites}
              />)} 
           </ul>
         </Wrapper>
