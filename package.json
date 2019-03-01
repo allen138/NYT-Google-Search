@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/allen138/NYT-Google-Search/issues"
   },
-  "homepage": "https://google-book-search-with-react.herokuapp.com/",
+  "homepage": "https://booksearchwithgoogle.herokuapp.com/",
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
