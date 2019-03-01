@@ -5,6 +5,9 @@ body{
   width: 1140px;
   margin: 0 auto;
 }
+.jumbotron{
+  margin-top: 25px;
+}
 footer{
   position: absolute;
   bottom: 0;
@@ -27,4 +30,17 @@ footer{
   position: relative;
   top: 5px;
   right: 5px;
+}
+@media (max-width: 1120px) {
+  .wrapper{
+    width: 80%
+  }
+}
+@media (max-width: 620px) {
+  .wrapper{
+    width: 80%
+  }
+  .jumbotron{
+    margin-top: 40px;
+  }
 }

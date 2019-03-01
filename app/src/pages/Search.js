@@ -11,7 +11,6 @@ class SearchPage extends Component {
   state= {
     books:{},
     search: "",
-    favorites: {}
   }
 
   searchBooks = query => {
@@ -31,12 +30,6 @@ class SearchPage extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     this.searchBooks(this.state.search);
-  }
-
-  addToFavorites = key => {
-    const favorites = { ...this.state.favorites };
-    favorites[key] = favorites[key] + 1
-    this.setState({ favorites })
   }
 
   render() {
