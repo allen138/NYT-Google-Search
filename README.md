@@ -3,7 +3,6 @@
 This is a full stack MERN app that allows you to ping Google Book API and search for a book. The app will display a maximun of ten results of the search to the user. The results will display the title, author(s), image, description, a link to google books, and a save button that will save that book to favorites. Click the favorites tab in the upper right corner, and it will lead you to the favorites page. The favorites page will display all the books that are saved to favorites in the same format the results from the search are display except instead a save to favorites button, it will display a delete button that will remove the book from favorites. Happy searching!
 
 ![SearchPage](client/public/googleSearchSS.png)
-![Favorites](client/public/favoritesSS.png)
 ## Getting started
 
 * **IF** your cloning or forking this repo, to get started follow a few steps. 
@@ -99,6 +98,8 @@ For the render() { return ( ... )} Inside the return div is the navbar, jumbotro
 The favorites page is a statefull component. The state is favorites which is an empty object. This page has a lifecycle componentWillMount() which calls the API function in the utils folder getSavedBooks. Whenever the 'save' button is clicked on the home page, that book's data gets put into the DB. Get all the savedBooks from the DB and set them to state. Just like for Booklist, use map function to iterate over the state of favorites to display the favorite books. In order to delete a book from the favorites list, create a function deleteBook that passes in the id and runs the API call from the utils folder deleteSavedBook and pass in the id. With the reponse, run the function loadFavorites. Now with a book deleted from the DB, LoadFavorites calls the API.getSavedBooks and sets the response to state. Now with the state changed the DOM will render the new state which will have one less book in the favorites.
 
 Finally, in our App component we set up our React-router. This will render each page depending on the endpoint hit. This component imports to the index file, which is then rendered by ReactDOM.render to the id 'root' in the html file in public. Now we are cooking with gasoline!
+
+![Favorites](client/public/favoritesSS.png)
 
 ## Tech Stack
 
